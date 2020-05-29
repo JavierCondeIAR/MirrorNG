@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NetworkAnimator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NetworkAnimator
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="http://mirror-networking.com">
+                <img id="logo" class="svg" style="vertical-align: middle;" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Mirror.NetworkAnimator">
+  
+  
+  <h1 id="Mirror_NetworkAnimator" data-uid="Mirror.NetworkAnimator" class="text-break">Class NetworkAnimator
+  </h1>
+  <div class="markdown level0 summary"><p>A component to synchronize Mecanim animation states for networked objects.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="Mirror.NetworkBehaviour.html">NetworkBehaviour</a></div>
+    <div class="level2"><span class="xref">NetworkAnimator</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_syncMode">NetworkBehaviour.syncMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_syncInterval">NetworkBehaviour.syncInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_IsServer">NetworkBehaviour.IsServer</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_IsClient">NetworkBehaviour.IsClient</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_IsLocalClient">NetworkBehaviour.IsLocalClient</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_IsLocalPlayer">NetworkBehaviour.IsLocalPlayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_IsServerOnly">NetworkBehaviour.IsServerOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_IsClientOnly">NetworkBehaviour.IsClientOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_HasAuthority">NetworkBehaviour.HasAuthority</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_NetId">NetworkBehaviour.NetId</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_Server">NetworkBehaviour.Server</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_Client">NetworkBehaviour.Client</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_ConnectionToServer">NetworkBehaviour.ConnectionToServer</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_ConnectionToClient">NetworkBehaviour.ConnectionToClient</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_NetworkTime">NetworkBehaviour.NetworkTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SyncVarDirtyBits">NetworkBehaviour.SyncVarDirtyBits</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_GetSyncVarHookGuard_System_UInt64_">NetworkBehaviour.GetSyncVarHookGuard(UInt64)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SetSyncVarHookGuard_System_UInt64_System_Boolean_">NetworkBehaviour.SetSyncVarHookGuard(UInt64, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_syncObjects">NetworkBehaviour.syncObjects</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_NetIdentity">NetworkBehaviour.NetIdentity</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_ComponentIndex">NetworkBehaviour.ComponentIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_InitSyncObject_Mirror_ISyncObject_">NetworkBehaviour.InitSyncObject(ISyncObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SendCommandInternal_Type_System_String_Mirror_NetworkWriter_System_Int32_">NetworkBehaviour.SendCommandInternal(Type, String, NetworkWriter, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_InvokeCommand_System_Int32_Mirror_NetworkReader_">NetworkBehaviour.InvokeCommand(Int32, NetworkReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SendRpcInternal_Type_System_String_Mirror_NetworkWriter_System_Int32_">NetworkBehaviour.SendRpcInternal(Type, String, NetworkWriter, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SendTargetRpcInternal_Mirror_INetworkConnection_Type_System_String_Mirror_NetworkWriter_System_Int32_">NetworkBehaviour.SendTargetRpcInternal(INetworkConnection, Type, String, NetworkWriter, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_InvokeRpc_System_Int32_Mirror_NetworkReader_">NetworkBehaviour.InvokeRpc(Int32, NetworkReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SendEventInternal_Type_System_String_Mirror_NetworkWriter_System_Int32_">NetworkBehaviour.SendEventInternal(Type, String, NetworkWriter, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_InvokeSyncEvent_System_Int32_Mirror_NetworkReader_">NetworkBehaviour.InvokeSyncEvent(Int32, NetworkReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_RegisterDelegate_Type_System_String_Mirror_MirrorInvokeType_Mirror_NetworkBehaviour_CmdDelegate_">NetworkBehaviour.RegisterDelegate(Type, String, MirrorInvokeType, NetworkBehaviour.CmdDelegate)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_RegisterCommandDelegate_Type_System_String_Mirror_NetworkBehaviour_CmdDelegate_">NetworkBehaviour.RegisterCommandDelegate(Type, String, NetworkBehaviour.CmdDelegate)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_RegisterRpcDelegate_Type_System_String_Mirror_NetworkBehaviour_CmdDelegate_">NetworkBehaviour.RegisterRpcDelegate(Type, String, NetworkBehaviour.CmdDelegate)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_RegisterEventDelegate_Type_System_String_Mirror_NetworkBehaviour_CmdDelegate_">NetworkBehaviour.RegisterEventDelegate(Type, String, NetworkBehaviour.CmdDelegate)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_GetRpcHandler_System_Int32_">NetworkBehaviour.GetRpcHandler(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_GetDelegate_System_Int32_">NetworkBehaviour.GetDelegate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SyncVarGameObjectEqual_GameObject_System_UInt32_">NetworkBehaviour.SyncVarGameObjectEqual(GameObject, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SetSyncVarGameObject_GameObject_GameObject__System_UInt64_System_UInt32__">NetworkBehaviour.SetSyncVarGameObject(GameObject, GameObject, UInt64, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_GetSyncVarGameObject_System_UInt32_GameObject__">NetworkBehaviour.GetSyncVarGameObject(UInt32, GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SyncVarNetworkIdentityEqual_Mirror_NetworkIdentity_System_UInt32_">NetworkBehaviour.SyncVarNetworkIdentityEqual(NetworkIdentity, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SetSyncVarNetworkIdentity_Mirror_NetworkIdentity_Mirror_NetworkIdentity__System_UInt64_System_UInt32__">NetworkBehaviour.SetSyncVarNetworkIdentity(NetworkIdentity, NetworkIdentity, UInt64, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_GetSyncVarNetworkIdentity_System_UInt32_Mirror_NetworkIdentity__">NetworkBehaviour.GetSyncVarNetworkIdentity(UInt32, NetworkIdentity)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SyncVarEqual__1___0___0__">NetworkBehaviour.SyncVarEqual&lt;T&gt;(T, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SetSyncVar__1___0___0__System_UInt64_">NetworkBehaviour.SetSyncVar&lt;T&gt;(T, T, UInt64)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SetDirtyBit_System_UInt64_">NetworkBehaviour.SetDirtyBit(UInt64)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_ClearAllDirtyBits">NetworkBehaviour.ClearAllDirtyBits()</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SerializeSyncVars_Mirror_NetworkWriter_System_Boolean_">NetworkBehaviour.SerializeSyncVars(NetworkWriter, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_DeserializeSyncVars_Mirror_NetworkReader_System_Boolean_">NetworkBehaviour.DeserializeSyncVars(NetworkReader, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SerializeObjectsAll_Mirror_NetworkWriter_">NetworkBehaviour.SerializeObjectsAll(NetworkWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_SerializeObjectsDelta_Mirror_NetworkWriter_">NetworkBehaviour.SerializeObjectsDelta(NetworkWriter)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Mirror.html">Mirror</a></h6>
+  <h6><strong>Assembly</strong>: doc.dll</h6>
+  <h5 id="Mirror_NetworkAnimator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NetworkAnimator : NetworkBehaviour</code></pre>
+  </div>
+  <h5 id="Mirror_NetworkAnimator_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The animation of game objects can be networked by this component. There are two models of authority for networked movement:</p>
+<p>If the object has authority on the client, then it should be animated locally on the owning client. The animation state information will be sent from the owning client to the server, then broadcast to all of the other clients. This is common for player objects.</p>
+<p>If the object has authority on the server, then it should be animated on the server and state information will be sent to all clients. This is common for objects not related to a specific client, such as an enemy unit.</p>
+<p>The NetworkAnimator synchronizes all animation parameters of the selected Animator. It does not automatically sychronize triggers. The function SetTrigger can by used by an object with authority to fire an animation trigger on other clients.</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_Animator.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.Animator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L33">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkAnimator_Animator" data-uid="Mirror.NetworkAnimator.Animator">Animator</h4>
+  <div class="markdown level1 summary"><p>The animator component to synchronize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Animator Animator</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Animator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_ClientAuthority.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.ClientAuthority%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L25">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkAnimator_ClientAuthority" data-uid="Mirror.NetworkAnimator.ClientAuthority">ClientAuthority</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ClientAuthority</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_OnDeserialize_Mirror_NetworkReader_System_Boolean_.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.OnDeserialize(Mirror.NetworkReader%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L337">View Source</a>
+  </span>
+  <a id="Mirror_NetworkAnimator_OnDeserialize_" data-uid="Mirror.NetworkAnimator.OnDeserialize*"></a>
+  <h4 id="Mirror_NetworkAnimator_OnDeserialize_Mirror_NetworkReader_System_Boolean_" data-uid="Mirror.NetworkAnimator.OnDeserialize(Mirror.NetworkReader,System.Boolean)">OnDeserialize(NetworkReader, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Custom Deserialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnDeserialize(NetworkReader reader, bool initialState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkReader.html">NetworkReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">initialState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_OnDeserialize_Mirror_NetworkReader_System_Boolean_">NetworkBehaviour.OnDeserialize(NetworkReader, Boolean)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_OnSerialize_Mirror_NetworkWriter_System_Boolean_.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.OnSerialize(Mirror.NetworkWriter%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L307">View Source</a>
+  </span>
+  <a id="Mirror_NetworkAnimator_OnSerialize_" data-uid="Mirror.NetworkAnimator.OnSerialize*"></a>
+  <h4 id="Mirror_NetworkAnimator_OnSerialize_Mirror_NetworkWriter_System_Boolean_" data-uid="Mirror.NetworkAnimator.OnSerialize(Mirror.NetworkWriter,System.Boolean)">OnSerialize(NetworkWriter, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Custom Serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool OnSerialize(NetworkWriter writer, bool initialState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkWriter.html">NetworkWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">initialState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Mirror.NetworkBehaviour.html#Mirror_NetworkBehaviour_OnSerialize_Mirror_NetworkWriter_System_Boolean_">NetworkBehaviour.OnSerialize(NetworkWriter, Boolean)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_ResetTrigger_System_Int32_.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.ResetTrigger(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L411">View Source</a>
+  </span>
+  <a id="Mirror_NetworkAnimator_ResetTrigger_" data-uid="Mirror.NetworkAnimator.ResetTrigger*"></a>
+  <h4 id="Mirror_NetworkAnimator_ResetTrigger_System_Int32_" data-uid="Mirror.NetworkAnimator.ResetTrigger(System.Int32)">ResetTrigger(Int32)</h4>
+  <div class="markdown level1 summary"><p>Causes an animation trigger to be reset for a networked object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetTrigger(int hash)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">hash</span></td>
+        <td><p>Hash id of trigger (from the Animator).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_ResetTrigger_System_String_.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.ResetTrigger(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L402">View Source</a>
+  </span>
+  <a id="Mirror_NetworkAnimator_ResetTrigger_" data-uid="Mirror.NetworkAnimator.ResetTrigger*"></a>
+  <h4 id="Mirror_NetworkAnimator_ResetTrigger_System_String_" data-uid="Mirror.NetworkAnimator.ResetTrigger(System.String)">ResetTrigger(String)</h4>
+  <div class="markdown level1 summary"><p>Causes an animation trigger to be reset for a networked object.</p>
+<p>If local authority is set, and this is called from the client, then the trigger will be reset on the server and all clients. If not, then this is called on the server, and the trigger will be reset on all clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetTrigger(string triggerName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">triggerName</span></td>
+        <td><p>Name of trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_SetTrigger_System_Int32_.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.SetTrigger(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L366">View Source</a>
+  </span>
+  <a id="Mirror_NetworkAnimator_SetTrigger_" data-uid="Mirror.NetworkAnimator.SetTrigger*"></a>
+  <h4 id="Mirror_NetworkAnimator_SetTrigger_System_Int32_" data-uid="Mirror.NetworkAnimator.SetTrigger(System.Int32)">SetTrigger(Int32)</h4>
+  <div class="markdown level1 summary"><p>Causes an animation trigger to be invoked for a networked object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTrigger(int hash)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">hash</span></td>
+        <td><p>Hash id of trigger (from the Animator).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator_SetTrigger_System_String_.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator.SetTrigger(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L357">View Source</a>
+  </span>
+  <a id="Mirror_NetworkAnimator_SetTrigger_" data-uid="Mirror.NetworkAnimator.SetTrigger*"></a>
+  <h4 id="Mirror_NetworkAnimator_SetTrigger_System_String_" data-uid="Mirror.NetworkAnimator.SetTrigger(System.String)">SetTrigger(String)</h4>
+  <div class="markdown level1 summary"><p>Causes an animation trigger to be invoked for a networked object.</p>
+<p>If local authority is set, and this is called from the client, then the trigger will be invoked on the server and all clients. If not, then this is called on the server, and the trigger will be called on all clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTrigger(string triggerName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">triggerName</span></td>
+        <td><p>Name of trigger.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkAnimator.md&amp;value=---%0Auid%3A%20Mirror.NetworkAnimator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Components/NetworkAnimator.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1420 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NetworkClient
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NetworkClient
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="http://mirror-networking.com">
+                <img id="logo" class="svg" style="vertical-align: middle;" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Mirror.NetworkClient">
+  
+  
+  <h1 id="Mirror_NetworkClient" data-uid="Mirror.NetworkClient" class="text-break">Class NetworkClient
+  </h1>
+  <div class="markdown level0 summary"><p>This is a network client class used by the networking system. It contains a NetworkConnection that is used to connect to a network server.</p>
+<p>The <a class="xref" href="Mirror.NetworkClient.html">NetworkClient</a> handle connection state, messages handlers, and connection configuration. There can be many <a class="xref" href="Mirror.NetworkClient.html">NetworkClient</a> instances in a process at a time, but only one that is connected to a game server (<a class="xref" href="Mirror.NetworkServer.html">NetworkServer</a>) that uses spawned objects.</p>
+<p><a class="xref" href="Mirror.NetworkClient.html">NetworkClient</a> has an internal update function where it handles events from the transport layer. This includes asynchronous connect events, disconnect events and incoming data from a server.</p>
+<p>The <a class="xref" href="Mirror.NetworkManager.html">NetworkManager</a> has a NetworkClient instance that it uses for games that it starts, but the NetworkClient may be used by itself.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">NetworkClient</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Mirror.INetworkClient.html">INetworkClient</a></div>
+    <div><a class="xref" href="Mirror.IClientObjectManager.html">IClientObjectManager</a></div>
+    <div><a class="xref" href="Mirror.IClientSceneManager.html">IClientSceneManager</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Mirror.html">Mirror</a></h6>
+  <h6><strong>Assembly</strong>: doc.dll</h6>
+  <h5 id="Mirror_NetworkClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NetworkClient : MonoBehaviour, INetworkClient, IClientObjectManager, IClientSceneManager</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Authenticated.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Authenticated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L50">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_Authenticated" data-uid="Mirror.NetworkClient.Authenticated">Authenticated</h4>
+  <div class="markdown level1 summary"><p>Event fires after the Client connection has sucessfully been authenticated with its Server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkClient.NetworkConnectionEvent Authenticated</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkClient.NetworkConnectionEvent.html">NetworkClient.NetworkConnectionEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_authenticator.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.authenticator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L33">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_authenticator" data-uid="Mirror.NetworkClient.authenticator">authenticator</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkAuthenticator authenticator</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkAuthenticator.html">NetworkAuthenticator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_ClientChangeScene.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.ClientChangeScene%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L57">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_ClientChangeScene" data-uid="Mirror.NetworkClient.ClientChangeScene">ClientChangeScene</h4>
+  <div class="markdown level1 summary"><p>Event fires when the Client starts changing scene.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkClient.ClientSceneChangeEvent ClientChangeScene</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkClient.ClientSceneChangeEvent.html">NetworkClient.ClientSceneChangeEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_ClientNotReady.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.ClientNotReady%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L52">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_ClientNotReady" data-uid="Mirror.NetworkClient.ClientNotReady">ClientNotReady</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkClient.NetworkConnectionEvent ClientNotReady</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkClient.NetworkConnectionEvent.html">NetworkClient.NetworkConnectionEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_ClientSceneChanged.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.ClientSceneChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L62">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_ClientSceneChanged" data-uid="Mirror.NetworkClient.ClientSceneChanged">ClientSceneChanged</h4>
+  <div class="markdown level1 summary"><p>Event fires after the Client has completed its scene change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkClient.NetworkConnectionEvent ClientSceneChanged</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkClient.NetworkConnectionEvent.html">NetworkClient.NetworkConnectionEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Connected.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Connected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L45">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_Connected" data-uid="Mirror.NetworkClient.Connected">Connected</h4>
+  <div class="markdown level1 summary"><p>Event fires once the Client has connected its Server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkClient.NetworkConnectionEvent Connected</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkClient.NetworkConnectionEvent.html">NetworkClient.NetworkConnectionEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Disconnected.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Disconnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L67">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_Disconnected" data-uid="Mirror.NetworkClient.Disconnected">Disconnected</h4>
+  <div class="markdown level1 summary"><p>Event fires after the Client has disconnected from its Server and Cleanup has been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent Disconnected</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_spawnableObjects.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.spawnableObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L124">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_spawnableObjects" data-uid="Mirror.NetworkClient.spawnableObjects">spawnableObjects</h4>
+  <div class="markdown level1 summary"><p>This is dictionary of the disabled NetworkIdentity objects in the scene that could be spawned by messages from the server.</p>
+<p>The key to the dictionary is the NetworkIdentity sceneId.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Dictionary&lt;ulong, NetworkIdentity&gt; spawnableObjects</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>, <a class="xref" href="Mirror.NetworkIdentity.html">NetworkIdentity</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_spawnPrefabs.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.spawnPrefabs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L96">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_spawnPrefabs" data-uid="Mirror.NetworkClient.spawnPrefabs">spawnPrefabs</h4>
+  <div class="markdown level1 summary"><p>List of prefabs that will be registered with the spawning system.</p>
+<p>For each of these prefabs, ClientManager.RegisterPrefab() will be automatically invoke.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;GameObject&gt; spawnPrefabs</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Time.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Time%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L100">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_Time" data-uid="Mirror.NetworkClient.Time">Time</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NetworkTime Time</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkTime.html">NetworkTime</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Transport.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Transport%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L104">View Source</a>
+  </span>
+  <h4 id="Mirror_NetworkClient_Transport" data-uid="Mirror.NetworkClient.Transport">Transport</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AsyncTransport Transport</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.AsyncTransport.html">AsyncTransport</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Active.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Active%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L85">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_Active_" data-uid="Mirror.NetworkClient.Active*"></a>
+  <h4 id="Mirror_NetworkClient_Active" data-uid="Mirror.NetworkClient.Active">Active</h4>
+  <div class="markdown level1 summary"><p>active is true while a client is connecting/connected
+(= while the network is active)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Active { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Connection.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Connection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L72">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_Connection_" data-uid="Mirror.NetworkClient.Connection*"></a>
+  <h4 id="Mirror_NetworkClient_Connection" data-uid="Mirror.NetworkClient.Connection">Connection</h4>
+  <div class="markdown level1 summary"><p>The NetworkConnection object this client is using.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public INetworkConnection Connection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.INetworkConnection.html">INetworkConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_IsConnected.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.IsConnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L90">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_IsConnected_" data-uid="Mirror.NetworkClient.IsConnected*"></a>
+  <h4 id="Mirror_NetworkClient_IsConnected" data-uid="Mirror.NetworkClient.IsConnected">IsConnected</h4>
+  <div class="markdown level1 summary"><p>This gives the current connection status of the client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsConnected { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_IsLocalClient.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.IsLocalClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L149">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_IsLocalClient_" data-uid="Mirror.NetworkClient.IsLocalClient*"></a>
+  <h4 id="Mirror_NetworkClient_IsLocalClient" data-uid="Mirror.NetworkClient.IsLocalClient">IsLocalClient</h4>
+  <div class="markdown level1 summary"><p>NetworkClient can connect to local server in host mode too</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLocalClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_LocalPlayer.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.LocalPlayer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L77">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_LocalPlayer_" data-uid="Mirror.NetworkClient.LocalPlayer*"></a>
+  <h4 id="Mirror_NetworkClient_LocalPlayer" data-uid="Mirror.NetworkClient.LocalPlayer">LocalPlayer</h4>
+  <div class="markdown level1 summary"><p>NetworkIdentity of the localPlayer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkIdentity LocalPlayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.NetworkIdentity.html">NetworkIdentity</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_ready.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.ready%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L112">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_ready_" data-uid="Mirror.NetworkClient.ready*"></a>
+  <h4 id="Mirror_NetworkClient_ready" data-uid="Mirror.NetworkClient.ready">ready</h4>
+  <div class="markdown level1 summary"><p>Returns true when a client's connection has been set to ready.</p>
+<p>A client that is ready recieves state updates from the server, while a client that is not ready does not. This useful when the state of the game is not normal, such as a scene change or end-of-game.</p>
+<p>This is read-only. To change the ready state of a client, use ClientScene.Ready(). The server is able to set the ready state of clients using NetworkServer.SetClientReady(), NetworkServer.SetClientNotReady() and NetworkServer.SetAllClientsNotReady().</p>
+<p>This is done when changing scenes so that clients don&apos;t receive state update messages during scene loading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ready { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Spawned.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Spawned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L129">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_Spawned_" data-uid="Mirror.NetworkClient.Spawned*"></a>
+  <h4 id="Mirror_NetworkClient_Spawned" data-uid="Mirror.NetworkClient.Spawned">Spawned</h4>
+  <div class="markdown level1 summary"><p>List of all objects spawned in this client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;uint, NetworkIdentity&gt; Spawned { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a>, <a class="xref" href="Mirror.NetworkIdentity.html">NetworkIdentity</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_ClearSpawners.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.ClearSpawners%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L656">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_ClearSpawners_" data-uid="Mirror.NetworkClient.ClearSpawners*"></a>
+  <h4 id="Mirror_NetworkClient_ClearSpawners" data-uid="Mirror.NetworkClient.ClearSpawners">ClearSpawners()</h4>
+  <div class="markdown level1 summary"><p>This clears the registered spawn prefabs and spawn handler functions for this client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearSpawners()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_ConnectAsync_Uri_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.ConnectAsync(Uri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L155">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_ConnectAsync_" data-uid="Mirror.NetworkClient.ConnectAsync*"></a>
+  <h4 id="Mirror_NetworkClient_ConnectAsync_Uri_" data-uid="Mirror.NetworkClient.ConnectAsync(Uri)">ConnectAsync(Uri)</h4>
+  <div class="markdown level1 summary"><p>Connect client to a NetworkServer instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ConnectAsync(Uri uri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>Address of the server to connect to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_DestroyAllClientObjects.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.DestroyAllClientObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L690">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_DestroyAllClientObjects_" data-uid="Mirror.NetworkClient.DestroyAllClientObjects*"></a>
+  <h4 id="Mirror_NetworkClient_DestroyAllClientObjects" data-uid="Mirror.NetworkClient.DestroyAllClientObjects">DestroyAllClientObjects()</h4>
+  <div class="markdown level1 summary"><p>Destroys all networked objects on the client.</p>
+<p>This can be used to clean up when a network connection is closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroyAllClientObjects()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Disconnect.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Disconnect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L262">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_Disconnect_" data-uid="Mirror.NetworkClient.Disconnect*"></a>
+  <h4 id="Mirror_NetworkClient_Disconnect" data-uid="Mirror.NetworkClient.Disconnect">Disconnect()</h4>
+  <div class="markdown level1 summary"><p>Disconnect from server.</p>
+<p>The disconnect message will be invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Disconnect()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_GetPrefab_System_Guid_GameObject__.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.GetPrefab(System.Guid%2CGameObject%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L496">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_GetPrefab_" data-uid="Mirror.NetworkClient.GetPrefab*"></a>
+  <h4 id="Mirror_NetworkClient_GetPrefab_System_Guid_GameObject__" data-uid="Mirror.NetworkClient.GetPrefab(System.Guid,GameObject@)">GetPrefab(System.Guid, out GameObject)</h4>
+  <div class="markdown level1 summary"><p>Find the registered prefab for this asset id.
+Useful for debuggers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetPrefab(System.Guid assetId, out GameObject prefab)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">System.Guid</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>asset id of the prefab</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td><p>the prefab gameobject</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if prefab was registered</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_PrepareToSpawnSceneObjects.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.PrepareToSpawnSceneObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L462">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_PrepareToSpawnSceneObjects_" data-uid="Mirror.NetworkClient.PrepareToSpawnSceneObjects*"></a>
+  <h4 id="Mirror_NetworkClient_PrepareToSpawnSceneObjects" data-uid="Mirror.NetworkClient.PrepareToSpawnSceneObjects">PrepareToSpawnSceneObjects()</h4>
+  <div class="markdown level1 summary"><p>Call this after loading/unloading a scene in the client after connection to register the spawnable objects</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PrepareToSpawnSceneObjects()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Ready_Mirror_INetworkConnection_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Ready(Mirror.INetworkConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L425">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_Ready_" data-uid="Mirror.NetworkClient.Ready*"></a>
+  <h4 id="Mirror_NetworkClient_Ready_Mirror_INetworkConnection_" data-uid="Mirror.NetworkClient.Ready(Mirror.INetworkConnection)">Ready(INetworkConnection)</h4>
+  <div class="markdown level1 summary"><p>Signal that the client connection is ready to enter the game.</p>
+<p>This could be for example when a client enters an ongoing game and has finished loading the current scene. The server should respond to the SYSTEM_READY event with an appropriate handler which instantiates the players object for example.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ready(INetworkConnection conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Mirror.INetworkConnection.html">INetworkConnection</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>The client connection which is ready.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_RegisterPrefab_GameObject_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.RegisterPrefab(GameObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L534">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_RegisterPrefab_" data-uid="Mirror.NetworkClient.RegisterPrefab*"></a>
+  <h4 id="Mirror_NetworkClient_RegisterPrefab_GameObject_" data-uid="Mirror.NetworkClient.RegisterPrefab(GameObject)">RegisterPrefab(GameObject)</h4>
+  <div class="markdown level1 summary"><p>Registers a prefab with the spawning system.</p>
+<p>When a NetworkIdentity object is spawned on a server with NetworkServer.SpawnObject(), and the prefab that the object was created from was registered with RegisterPrefab(), the client will use that prefab to instantiate a corresponding client object with the same netId.</p>
+<p>The NetworkManager has a list of spawnable prefabs, it uses this function to register those prefabs with the ClientScene.</p>
+<p>The set of current spawnable object is available in the ClientScene static member variable ClientScene.prefabs, which is a dictionary of NetworkAssetIds and prefab references.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPrefab(GameObject prefab)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td><p>A Prefab that will be spawned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_RegisterPrefab_GameObject_Mirror_SpawnDelegate_Mirror_UnSpawnDelegate_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.RegisterPrefab(GameObject%2CMirror.SpawnDelegate%2CMirror.UnSpawnDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L564">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_RegisterPrefab_" data-uid="Mirror.NetworkClient.RegisterPrefab*"></a>
+  <h4 id="Mirror_NetworkClient_RegisterPrefab_GameObject_Mirror_SpawnDelegate_Mirror_UnSpawnDelegate_" data-uid="Mirror.NetworkClient.RegisterPrefab(GameObject,Mirror.SpawnDelegate,Mirror.UnSpawnDelegate)">RegisterPrefab(GameObject, SpawnDelegate, UnSpawnDelegate)</h4>
+  <div class="markdown level1 summary"><p>Registers a prefab with the spawning system.</p>
+<p>When a NetworkIdentity object is spawned on a server with NetworkServer.SpawnObject(), and the prefab that the object was created from was registered with RegisterPrefab(), the client will use that prefab to instantiate a corresponding client object with the same netId.</p>
+<p>The NetworkManager has a list of spawnable prefabs, it uses this function to register those prefabs with the ClientScene.</p>
+<p>The set of current spawnable object is available in the ClientScene static member variable ClientScene.prefabs, which is a dictionary of NetworkAssetIds and prefab references.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPrefab(GameObject prefab, SpawnDelegate spawnHandler, UnSpawnDelegate unspawnHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td><p>A Prefab that will be spawned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.SpawnDelegate.html">SpawnDelegate</a></td>
+        <td><span class="parametername">spawnHandler</span></td>
+        <td><p>A method to use as a custom spawnhandler on clients.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.UnSpawnDelegate.html">UnSpawnDelegate</a></td>
+        <td><span class="parametername">unspawnHandler</span></td>
+        <td><p>A method to use as a custom un-spawnhandler on clients.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_RegisterPrefab_GameObject_Mirror_SpawnHandlerDelegate_Mirror_UnSpawnDelegate_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.RegisterPrefab(GameObject%2CMirror.SpawnHandlerDelegate%2CMirror.UnSpawnDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L578">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_RegisterPrefab_" data-uid="Mirror.NetworkClient.RegisterPrefab*"></a>
+  <h4 id="Mirror_NetworkClient_RegisterPrefab_GameObject_Mirror_SpawnHandlerDelegate_Mirror_UnSpawnDelegate_" data-uid="Mirror.NetworkClient.RegisterPrefab(GameObject,Mirror.SpawnHandlerDelegate,Mirror.UnSpawnDelegate)">RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)</h4>
+  <div class="markdown level1 summary"><p>Registers a prefab with the spawning system.</p>
+<p>When a NetworkIdentity object is spawned on a server with NetworkServer.SpawnObject(), and the prefab that the object was created from was registered with RegisterPrefab(), the client will use that prefab to instantiate a corresponding client object with the same netId.</p>
+<p>The NetworkManager has a list of spawnable prefabs, it uses this function to register those prefabs with the ClientScene.</p>
+<p>The set of current spawnable object is available in the ClientScene static member variable ClientScene.prefabs, which is a dictionary of NetworkAssetIds and prefab references.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPrefab(GameObject prefab, SpawnHandlerDelegate spawnHandler, UnSpawnDelegate unspawnHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td><p>A Prefab that will be spawned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.SpawnHandlerDelegate.html">SpawnHandlerDelegate</a></td>
+        <td><span class="parametername">spawnHandler</span></td>
+        <td><p>A method to use as a custom spawnhandler on clients.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.UnSpawnDelegate.html">UnSpawnDelegate</a></td>
+        <td><span class="parametername">unspawnHandler</span></td>
+        <td><p>A method to use as a custom un-spawnhandler on clients.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_RegisterPrefab_GameObject_System_Guid_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.RegisterPrefab(GameObject%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L511">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_RegisterPrefab_" data-uid="Mirror.NetworkClient.RegisterPrefab*"></a>
+  <h4 id="Mirror_NetworkClient_RegisterPrefab_GameObject_System_Guid_" data-uid="Mirror.NetworkClient.RegisterPrefab(GameObject,System.Guid)">RegisterPrefab(GameObject, System.Guid)</h4>
+  <div class="markdown level1 summary"><p>Registers a prefab with the spawning system.</p>
+<p>When a NetworkIdentity object is spawned on a server with NetworkServer.SpawnObject(), and the prefab that the object was created from was registered with RegisterPrefab(), the client will use that prefab to instantiate a corresponding client object with the same netId.</p>
+<p>The NetworkManager has a list of spawnable prefabs, it uses this function to register those prefabs with the ClientScene.</p>
+<p>The set of current spawnable object is available in the ClientScene static member variable ClientScene.prefabs, which is a dictionary of NetworkAssetIds and prefab references.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPrefab(GameObject prefab, System.Guid newAssetId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td><p>A Prefab that will be spawned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">System.Guid</a></td>
+        <td><span class="parametername">newAssetId</span></td>
+        <td><p>An assetId to be assigned to this prefab. This allows a dynamically created game object to be registered for an already known asset Id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_RegisterSpawnHandler_System_Guid_Mirror_SpawnDelegate_Mirror_UnSpawnDelegate_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.RegisterSpawnHandler(System.Guid%2CMirror.SpawnDelegate%2CMirror.UnSpawnDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L623">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_RegisterSpawnHandler_" data-uid="Mirror.NetworkClient.RegisterSpawnHandler*"></a>
+  <h4 id="Mirror_NetworkClient_RegisterSpawnHandler_System_Guid_Mirror_SpawnDelegate_Mirror_UnSpawnDelegate_" data-uid="Mirror.NetworkClient.RegisterSpawnHandler(System.Guid,Mirror.SpawnDelegate,Mirror.UnSpawnDelegate)">RegisterSpawnHandler(System.Guid, SpawnDelegate, UnSpawnDelegate)</h4>
+  <div class="markdown level1 summary"><p>This is an advanced spawning function that registers a custom assetId with the UNET spawning system.</p>
+<p>This can be used to register custom spawning methods for an assetId - instead of the usual method of registering spawning methods for a prefab. This should be used when no prefab exists for the spawned objects - such as when they are constructed dynamically at runtime from configuration data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterSpawnHandler(System.Guid assetId, SpawnDelegate spawnHandler, UnSpawnDelegate unspawnHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">System.Guid</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Custom assetId string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.SpawnDelegate.html">SpawnDelegate</a></td>
+        <td><span class="parametername">spawnHandler</span></td>
+        <td><p>A method to use as a custom spawnhandler on clients.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.UnSpawnDelegate.html">UnSpawnDelegate</a></td>
+        <td><span class="parametername">unspawnHandler</span></td>
+        <td><p>A method to use as a custom un-spawnhandler on clients.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_RegisterSpawnHandler_System_Guid_Mirror_SpawnHandlerDelegate_Mirror_UnSpawnDelegate_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.RegisterSpawnHandler(System.Guid%2CMirror.SpawnHandlerDelegate%2CMirror.UnSpawnDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L635">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_RegisterSpawnHandler_" data-uid="Mirror.NetworkClient.RegisterSpawnHandler*"></a>
+  <h4 id="Mirror_NetworkClient_RegisterSpawnHandler_System_Guid_Mirror_SpawnHandlerDelegate_Mirror_UnSpawnDelegate_" data-uid="Mirror.NetworkClient.RegisterSpawnHandler(System.Guid,Mirror.SpawnHandlerDelegate,Mirror.UnSpawnDelegate)">RegisterSpawnHandler(System.Guid, SpawnHandlerDelegate, UnSpawnDelegate)</h4>
+  <div class="markdown level1 summary"><p>This is an advanced spawning function that registers a custom assetId with the UNET spawning system.</p>
+<p>This can be used to register custom spawning methods for an assetId - instead of the usual method of registering spawning methods for a prefab. This should be used when no prefab exists for the spawned objects - such as when they are constructed dynamically at runtime from configuration data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterSpawnHandler(System.Guid assetId, SpawnHandlerDelegate spawnHandler, UnSpawnDelegate unspawnHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">System.Guid</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Custom assetId string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.SpawnHandlerDelegate.html">SpawnHandlerDelegate</a></td>
+        <td><span class="parametername">spawnHandler</span></td>
+        <td><p>A method to use as a custom spawnhandler on clients.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Mirror.UnSpawnDelegate.html">UnSpawnDelegate</a></td>
+        <td><span class="parametername">unspawnHandler</span></td>
+        <td><p>A method to use as a custom un-spawnhandler on clients.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_RemovePlayer.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.RemovePlayer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L401">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_RemovePlayer_" data-uid="Mirror.NetworkClient.RemovePlayer*"></a>
+  <h4 id="Mirror_NetworkClient_RemovePlayer" data-uid="Mirror.NetworkClient.RemovePlayer">RemovePlayer()</h4>
+  <div class="markdown level1 summary"><p>Removes the player from the game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemovePlayer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if succcessful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_Send__1___0_System_Int32_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.Send%60%601(%60%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L281">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_Send_" data-uid="Mirror.NetworkClient.Send*"></a>
+  <h4 id="Mirror_NetworkClient_Send__1___0_System_Int32_" data-uid="Mirror.NetworkClient.Send``1(``0,System.Int32)">Send&lt;T&gt;(T, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Send&lt;T&gt;(T message, int channelId = null)
+    where T : IMessageBase</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">channelId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_SendAsync__1___0_System_Int32_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.SendAsync%60%601(%60%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L276">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_SendAsync_" data-uid="Mirror.NetworkClient.SendAsync*"></a>
+  <h4 id="Mirror_NetworkClient_SendAsync__1___0_System_Int32_" data-uid="Mirror.NetworkClient.SendAsync``1(``0,System.Int32)">SendAsync&lt;T&gt;(T, Int32)</h4>
+  <div class="markdown level1 summary"><p>This sends a network message with a message Id to the server. This message is sent on channel zero, which by default is the reliable channel.</p>
+<p>The message must be an instance of a class derived from MessageBase.</p>
+<p>The message id passed to Send() is used to identify the handler function to invoke on the server when the message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SendAsync&lt;T&gt;(T message, int channelId = null)
+    where T : IMessageBase</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">channelId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>True if message was sent.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The message type to unregister.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_UnregisterPrefab_GameObject_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.UnregisterPrefab(GameObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L601">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_UnregisterPrefab_" data-uid="Mirror.NetworkClient.UnregisterPrefab*"></a>
+  <h4 id="Mirror_NetworkClient_UnregisterPrefab_GameObject_" data-uid="Mirror.NetworkClient.UnregisterPrefab(GameObject)">UnregisterPrefab(GameObject)</h4>
+  <div class="markdown level1 summary"><p>Removes a registered spawn prefab that was setup with ClientScene.RegisterPrefab.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterPrefab(GameObject prefab)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td><p>The prefab to be removed from registration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient_UnregisterSpawnHandler_System_Guid_.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient.UnregisterSpawnHandler(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L647">View Source</a>
+  </span>
+  <a id="Mirror_NetworkClient_UnregisterSpawnHandler_" data-uid="Mirror.NetworkClient.UnregisterSpawnHandler*"></a>
+  <h4 id="Mirror_NetworkClient_UnregisterSpawnHandler_System_Guid_" data-uid="Mirror.NetworkClient.UnregisterSpawnHandler(System.Guid)">UnregisterSpawnHandler(System.Guid)</h4>
+  <div class="markdown level1 summary"><p>Removes a registered spawn handler function that was registered with ClientScene.RegisterHandler().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterSpawnHandler(System.Guid assetId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">System.Guid</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>The assetId for the handler to be removed for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Mirror.INetworkClient.html">INetworkClient</a>
+  </div>
+  <div>
+      <a class="xref" href="Mirror.IClientObjectManager.html">IClientObjectManager</a>
+  </div>
+  <div>
+      <a class="xref" href="Mirror.IClientSceneManager.html">IClientSceneManager</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JavierCondeIAR/MirrorNG/new/5171c255c77adde186a213a56287e430e38ae8aa/apiSpec/new?filename=Mirror_NetworkClient.md&amp;value=---%0Auid%3A%20Mirror.NetworkClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JavierCondeIAR/MirrorNG/blob/5171c255c77adde186a213a56287e430e38ae8aa/Assets/Mirror/Runtime/NetworkClient.cs/#L26" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
